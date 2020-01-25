@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <%- include('../partials/header.ejs') %>
+
+  </header>
+
+    <form method="POST" action="/submit_uploadfile" enctype="multipart/form-data">
+
+      <div class="form-group row d-flex justify-content-center">
+        <label for="content_category_label" class=" col-8 col-md-4 col-sm-4 col-4"><b>Category</b></label>
+        <select name="content_domain" id="content_domain" class="form-control col-lg-4 col-sm-6 col-xl-5">
+          <option value="Life Insurance ">Life Insurance</option>
+          <option value="Health Insurance">Health Insurance</option>
+          <option value="Investment">Investment</option>
+          <option value="Psychometric">Psychometric</option>
+        </select>
+      </div>
+      <div class="form-group row d-flex justify-content-center">
+        <label for="pyscometric_label" class=" col-8 col-md-4 col-sm-4 col-4"><b>Pyscometric</b></label>
+        <select name="pyscometric" id="pyscometric" class="form-control col-lg-4 col-sm-6 col-xl-5">
+          <option value="0-5">0-5</option>
+          <option value="5-10">5-10</option>
+          <option value="10-15">10-15</option>
+          <option value="15-20">15-20</option>
+        </select>
+      </div>
+      <div class="form-group row d-flex justify-content-center">
+        <label for="content_type_label" class=" col-8 col-md-4 col-sm-4 col-4"><b>Content Type</b></label>
+        <select name="content_type" id="content_type" class="form-control col-lg-4 col-sm-6 col-xl-5">
+          <option value="Image">Image</option>
+          <option value="Video">Video</option>
+          <option value="Text">Text</option>
+        </select>
+      </div>
+      <div class="form-group row d-flex justify-content-center">
+        <label for="Select File" class=" col-8 col-md-4 col-sm-4 col-4"><b>Select File</b></label>
+        <input type="file" class="form-control col-lg-4 col-sm-6 col-xl-5" name="upload_file" id="upload_file"> </div>
+      <div class="form-group row d-flex justify-content-center">
+        <label for="question" class=" col-8 col-md-4 col-sm-4 col-4"><b>Question</b></label>
+        <input type="text" class="form-control col-lg-4 col-sm-6 col-xl-5" name="question" id="question"
+          placeholder="question"> </div>
+
+      <div class="form-group row d-flex justify-content-center">
+        <label for="Option" class=" col-8 col-md-4 col-sm-4 col-4"><b>Option 1</b></label>
+        <input type="text" class="form-control col-lg-4 col-sm-6 col-xl-5" name="option_1" id="option_1"
+          placeholder="option 1"> </div>
+
+      <div class="form-group row d-flex justify-content-center">
+        <label for="Option" class=" col-8 col-md-4 col-sm-4 col-4"><b>Option 2</b></label>
+        <input type="text" class="form-control col-lg-4 col-sm-6 col-xl-5" name="option_2" id="option_2"
+          placeholder="option 2"> </div>
+
+      <div class="form-group row d-flex justify-content-center">
+        <label for="Option" class=" col-8 col-md-4 col-sm-4 col-4"><b>Option 3</b></label>
+        <input type="text" class="form-control col-lg-4 col-sm-6 col-xl-5" name="option_3" id="option_3"
+          placeholder="option 3"> </div>
+
+      <div class="form-group row d-flex justify-content-center">
+        <label for="correct_option" class=" col-xl-4 col-md-4 col-sm-4 col-4"><b>Correct option</b></label>
+        <input type="text" name="correct_option" id="correct_option" class="form-control col-lg-4 col-sm-6 col-xl-5" placeholder="Correct Answer">
+        </div>
+
+
+        <!-- <input type="radio" class="form-check-input" name="correct_option" id="correct_option" value="option_1">Option 1
+        <input type="radio" class="form-check-input" name="correct_option" id="correct_option" value="option_2"> Option 2
+        <input type="radio"  class="form-check-input" name="correct_option" id="correct_option" value="option_3"> Option 3 -->
+
+      </div>
+
+
+      <div class="form-group row d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">submit</button>
+      </div>
+
+    </form>
+
+</body>
+
+</html>

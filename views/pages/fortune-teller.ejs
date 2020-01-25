@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <title>Cassandra - Fortune Teller</title>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="150" id="body-cassandra">
+  <%- include('../partials/header.ejs') %>
+
+  <div class="jumbotron" id="jumbo-cassandra">
+    <h1 class="display-4" id="first-header-cass">
+      Hello, I'm Cassandra, Financial Advisor
+    </h1>
+    <p class="lead" id="para-cassandra">
+      Ask me any question, and I will give you an answer
+    </p>
+
+    <p id="msg-cass"></p>
+    <div class="container" id="row-cass">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Your question" aria-label="Recipient's username"
+          aria-describedby="button-addon2" id="question" />
+        <div class="input-group-append">
+          <button class="btn btn-light" type="button" id="button-addon2">
+            Ask
+          </button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <p>Designed & created by Majestico. Copyright © by Majestico. 2020</p>
+    </footer>
+    <script type="text/javascript" src="scripts/questions.js"></script>
+</html>

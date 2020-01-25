@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header.ejs') %>
+
+    </header>
+    <br>
+
+    <form action="/submit_aadhaar" method="POST">
+
+        <div class="form-group row d-flex justify-content-center">
+            <label for="aadhaar" class=" col-8 col-md-4 col-sm-4 col-4"><b>Aadhaar No.</b></label>
+            <input type="text" placeholder="Aadhaar No" id="aadhaar" name="aadhaar"
+                class="form-control col-lg-4 col-sm-6 col-xl-5">
+        </div>
+        
+
+        <div class="form-group row d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">submit</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

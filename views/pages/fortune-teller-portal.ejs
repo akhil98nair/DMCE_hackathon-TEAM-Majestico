@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css" />
+    <script src="node_modules/ejs/ejs.min.js"></script>
+  <script src="ejs.js"></script>
+
+
+  <title>FinAdvise</title>
+  
+  <!-- <script>
+    function myFunction() {
+      var x = document.cookie;
+      var res = x.split("=");
+      console.log(res[1])
+      if(res[1] == "" || res[1] == undefined){
+
+        var adhar_no = prompt("Please enter your Adhar No.");
+      if (adhar_no != null) {
+        if(adhar_no.length == 12){
+          document.getElementById("adhar_no").innerHTML = adhar_no;
+        document.cookie ="adhar_no="+ adhar_no;
+        
+        window.location.href = "/quiz";
+        }
+        
+      }
+      }
+      
+    }
+  </script> -->
+</head>
+
+<body id="body-fortune" data-spy="scroll" data-target="#navbar" data-offset="150" onload="myFunction()">
+  <header>
+    <%- include('../partials/header.ejs') %>
+
+  </header>
+  <input id="adhar_no" name="adhar_no" hidden />
+  <div class="jumbotron" id="jumbo">
+    <h1 class="display-4" id="first-header">FinAdvise</h1>
+    <p class="lead" id="p1">
+      Now Financial Learning Made Simple in a fun way.
+    </p>
+  </div>
+
+  <div class=" row justify-content-md-center " id="about">
+    <div class="col-sm-3 homepage_card">
+      <a href="/chatbot">
+        <div class="card">
+          <img src="img/girl.jpeg" width="221px" height="200px" class="card-img-top" alt="city" />
+          <div class="card-body">
+            <h5 class="card-title">Meet FinBot - Your Financial Educator</h5>
+            <p class="card-text">
+              Ask any question about your finance queries and it wil give
+              you an answer.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-sm-3 homepage_card">
+      <a href="/psychometric">
+        <div class="card">
+          <img src="img/magic.jpeg" width="221px" height="200px"  class="card-img-top" alt="view" />
+          <div class="card-body">
+            <h5 class="card-title">Psychometric</h5>
+            <p class="card-text">
+              Click here to test your financial skills
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-sm-3 homepage_card">
+      <a href="/quiz">
+        <div class="card">
+          <img src="img/pum.jpeg" width="221px" height="200px"  class="card-img-top" alt="magic" />
+          <div class="card-body">
+            <h5 class="card-title">Guide  & Amazing Quiz</h5>
+            <p class="card-text">
+              Take this amazing quiz, to know more about Financial products
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Designed & created by Majestico. Copyright © by Majestico. 2020</p>
+  </footer>
+</body>
+
+</html>

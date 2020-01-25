@@ -1,0 +1,825 @@
+.main-container-quiz {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+51,bce0ee+100 */
+  background: rgb(179, 220, 237);
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 99vw;
+  background-color: rgba(20, 20, 20, 0.8);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.nav-link {
+  color: #ccc;
+}
+
+.navbar-brand,
+.navbar-brand:hover,
+.nav-link:hover {
+  color: #fff;
+}
+
+.main-quiz {
+  padding-top: 10%;
+  margin: auto;
+  color: #fff;
+  width: 50%;
+  font-size: 150%;
+  text-align: center;
+}
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.active-slide {
+  opacity: 1;
+  z-index: 2;
+}
+
+.quiz-container {
+  position: relative;
+  height: 350px;
+}
+
+.question {
+  font-size: 200%;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+
+.answers label {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.answers label:hover {
+  font-size: 22px;
+}
+
+button {
+  position: relative;
+  margin: 10px;
+  background: none;
+  color: #fff;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  padding: 10px;
+  box-shadow: 0 10px 10px #333;
+}
+
+#previous {
+  transform: scale(0.8);
+}
+
+#next {
+  transform: scale(1.2);
+}
+
+button:hover {
+  box-shadow: 0 5px 5px #ddd;
+}
+
+button:active {
+  box-shadow: 0 5px 5px #ddd;
+  transform: translateY(4px);
+}
+
+#results {
+  z-index: 1000;
+  font-size: 150%;
+  font-weight: 300;
+  border-radius: 8px;
+  background-color: rgba(20, 20, 20, 0.8);
+  color: rgba(200, 50, 100);
+}
+
+footer {
+  background-color: rgb(20, 20, 20);
+  position: relative;
+  width: auto;
+  height: 6rem;
+}
+
+footer>p {
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+  margin-top: 4rem;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .quiz-container {
+    height: 400px;
+  }
+
+  .question {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 825px) {
+  .quiz-container {
+    height: 350px;
+    margin-top: 25%;
+  }
+
+  .answers label {
+    font-size: 20px;
+  }
+
+  .question {
+    font-size: 120%;
+    margin-bottom: 30px;
+  }
+
+  .main-container-quiz {
+    height: 200vh;
+  }
+
+  button {
+    font-size: 15px;
+  }
+
+  #results {
+    font-size: 100%;
+    margin-top: 30%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .main-container-quiz {
+    height: 250vh;
+  }
+
+  #next {
+    top: -50px;
+  }
+
+  #previous {
+    top: 100px;
+  }
+
+  #submit {
+    top: -50px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .main-container-quiz {
+    height: 150vh;
+  }
+
+  .quiz-container {
+    height: 400px;
+  }
+
+  .question {
+    font-size: 80%;
+    margin-top: 50px;
+  }
+
+  .answers label {
+    font-size: 18px;
+  }
+
+  #results {
+    font-size: 100%;
+    margin-top: 25%;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .quiz-container {
+    height: 350px;
+  }
+
+  .question {
+    font-size: 70%;
+    margin-bottom: 10px;
+  }
+
+  .answers label {
+    font-size: 16px;
+  }
+
+  #results {
+    font-size: 90%;
+  }
+}
+
+.main {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+51,bce0ee+100 */
+  background: rgb(179, 220, 237);
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  color: #000;
+  text-align: center;
+  font-weight: 300;
+  padding-top: 10%;
+  font-size: 400%;
+}
+
+.main-div {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flip-card {
+  border-radius: 6px;
+  width: 220px;
+  -o-background-color: transparent;
+  -moz-background-color: transparent;
+  -webkit-background-color: transparent;
+  background-color: transparent;
+  -o-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  margin: 50px;
+  -o-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -o-transition: transform 0.6s;
+  -moz-transition: transform 0.6s;
+  -webkit-transition: transform 0.6s;
+  transition: transform 0.6s;
+  -o-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-card-back-msg {
+  background-color: #141415;
+  position: relative;
+  width: 220px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 200;
+  background-size: cover;
+  box-shadow: 0 10px 20px #333;
+}
+
+.flip-card:hover .flip-card-inner {
+  -o-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -ms-filter: flipv;
+  filter: flipv;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  color: #fff;
+  -o-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -ms-filter: flipv;
+  filter: flipv;
+  z-index: 1;
+}
+
+.card-img-top {
+  box-shadow: 0 10px 20px #333;
+}
+
+.row {
+  margin: 150px 0;
+}
+
+@media only screen and (max-width: 1680px) {
+  .flip-card {
+    margin: 10px;
+  }
+
+  .flip-card-back-msg {
+    width: 220px;
+    height: 300px;
+  }
+
+  h1 {
+    padding-top: 10%;
+  }
+
+  .main {
+    height: 120vh;
+  }
+
+  #card6 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  h1 {
+    padding-top: 10%;
+  }
+
+  .main {
+    height: 120vh;
+  }
+
+  #card5 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .flip-card-back-msg {
+    width: 200px;
+    height: 280px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 40px;
+    padding-top: 150px;
+    padding-bottom: 40px;
+  }
+
+  .flip-card-back-msg {
+    width: 180px;
+    height: 260px;
+  }
+
+  .main {
+    height: 200vh;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  #card4 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .flip-card-back-msg {
+    width: 150px;
+    height: 210px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 30px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .flip-card {
+    margin: 5px;
+  }
+
+  .flip-card-back-msg {
+    width: 120px;
+    height: 170px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #card3 {
+    display: none;
+  }
+
+  .flip-card-back-msg {
+    width: 120px;
+    height: 190px;
+    font-size: 15px;
+  }
+
+  .main {
+    height: 110vh;
+  }
+}
+
+#body-fortune {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  background-color: #171b23;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+51,bce0ee+100 */
+  background: rgb(179, 220, 237);
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+
+}
+
+#jumbo {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  text-align: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+51,bce0ee+100 */
+  background: rgb(179, 220, 237);
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0;
+  color: #000;
+  background-attachment: fixed;
+}
+
+#jumbo-button {
+  padding: 6px 10px;
+  font-size: 16px;
+}
+
+#jumbo-email {
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+#first-header {
+  font-size: 600%;
+  font-weight: 200;
+}
+
+#second-header {
+  font-size: 280%;
+  font-weight: 500;
+}
+
+#summary {
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+#third-header {
+  font-size: 220%;
+  font-weight: 500;
+}
+
+#p1 {
+  font-size: 200%;
+}
+
+#about {
+  padding: 0;
+  height: 60vh;
+}
+
+.card {
+  box-shadow: 0 10px 20px #000;
+  border: 2px solid #333;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px #333;
+  border: 2px solid #ddd;
+  transform: scale(1.05);
+}
+
+.card-body {
+  background-color: rgb(20, 20, 20);
+}
+
+.card-title,
+.card-text {
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1450px) {
+  .row {
+    margin: 50px;
+  }
+
+  #jumbo {
+    height: 45vh;
+  }
+
+  #first-header {
+    padding-top: 3%;
+  }
+
+  .card {
+    height: 400px;
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .card {
+    height: 360px;
+    box-sizing: border-box;
+  }
+
+  .card-title,
+  .card-text {
+    font-size: 15px;
+    font-weight: 300;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  #jumbo {
+    height: 55vh;
+  }
+
+  #about {
+    height: 200vh;
+  }
+
+  #first-header {
+    padding-top: 1%;
+    font-size: 200%;
+  }
+
+  #p1 {
+    font-size: 100%;
+    margin-top: 30px;
+  }
+
+  .card-title {
+    font-size: 110%;
+  }
+
+  .card-text {
+    font-size: 80%;
+  }
+
+  .card {
+    height: 400px;
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #first-header {
+    font-size: 40px;
+    padding-top: 15%;
+  }
+
+  #p1 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+
+#body-cassandra {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+}
+
+#jumbo-cassandra {
+  padding-top: 10%;
+  padding-bottom: 20%;
+  text-align: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+51,bce0ee+100 */
+  background: rgb(179, 220, 237);
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(179, 220, 237, 1) 0%, rgba(41, 184, 229, 1) 51%, rgba(188, 224, 238, 1) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+
+  background-size: cover;
+  margin-bottom: 0;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+#first-header-cass {
+  font-size: 450%;
+  font-weight: 200;
+  padding-top: 5%;
+}
+
+#para-cassandra {
+  font-size: 200%;
+}
+
+#msg-cass {
+  font-size: 200%;
+  font-weight: 300;
+  margin-top: 50px;
+  background-color: rgba(20, 20, 20, 0.8);
+  color: rgba(200, 50, 100);
+}
+
+#question {
+  padding: 20px;
+  height: 50px;
+}
+
+.form-control {
+  box-shadow: 0 10px 20px #171b23;
+}
+
+#button-addon2 {
+  width: 200px;
+  font-size: 20px;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+@media only screen and (max-width: 1366px) {
+  #jumbo-cassandra {
+    padding-top: 10%;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  #jumbo-cassandra {
+    padding-top: 10%;
+    height: 140vh;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  #first-header-cass {
+    font-size: 30px;
+    font-weight: 200;
+  }
+
+  #para-cassandra {
+    font-size: 20px;
+  }
+
+  .col-sm-3 {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    height: 450px;
+  }
+
+  #jumbo-cassandra {
+    height: 200vh;
+    padding-top: 50px;
+  }
+
+  #form-cass {
+    margin-top: 30px;
+  }
+
+  #first-header-cass {
+    font-size: 200%;
+  }
+
+  #para-cassandra {
+    font-size: 150%;
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #jumbo-cassandra {
+    padding-top: 20%;
+    height: 150vh;
+  }
+
+  .card {
+    height: 330px;
+  }
+
+  #form-cass {
+    margin-top: 50px;
+  }
+
+  #first-header-cass {
+    font-size: 200%;
+  }
+
+  #para-cassandra {
+    font-size: 150%;
+    margin-top: 30px;
+  }
+
+  #button-addon2 {
+    width: 100px;
+  }
+
+  #msg-cass {
+    font-size: 30px;
+  }
+}

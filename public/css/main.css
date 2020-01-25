@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:800&display=swap');
+
+html {
+	scroll-behavior: smooth;
+	width: auto;
+	background: no-repeat;
+
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+51,bce0ee+100 */
+background: rgb(179,220,237); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 51%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 51%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 51%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+body {
+	font-family: 'Open Sanse', sans-serif;
+	margin: 0px;
+	width: auto;
+	height: 700px;
+	background: no-repeat;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+51,bce0ee+100 */
+background: rgb(179,220,237); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 51%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 51%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 51%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+
+.modal-dialog{
+	padding-top: 50px;
+}
+
+.homepage_card{
+	padding-top: 60px;
+}
+
+
+section {
+	font-size: 3em;
+	/* font-weight: 800; */
+    font-family: 'Josefin Sans', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 120vh;
+	background: rgb(179,220,237); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(179,220,237,1) 0%, rgba(41,184,229,1) 51%, rgba(188,224,238,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 51%,rgba(188,224,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(179,220,237,1) 0%,rgba(41,184,229,1) 51%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+
+#page-1, nav a:nth-of-type(1) {
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e6f0a3+0,d2e638+50,c3d825+51,dbf043+100;Green+Gloss+%232 */
+background: rgb(230,240,163); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(230,240,163,1) 0%, rgba(210,230,56,1) 50%, rgba(195,216,37,1) 51%, rgba(219,240,67,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#page-2, nav a:nth-of-type(2) {
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e6f0a3+0,d2e638+50,c3d825+51,dbf043+100;Green+Gloss+%232 */
+background: rgb(230,240,163); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(230,240,163,1) 0%, rgba(210,230,56,1) 50%, rgba(195,216,37,1) 51%, rgba(219,240,67,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(230,240,163,1) 0%,rgba(210,230,56,1) 50%,rgba(195,216,37,1) 51%,rgba(219,240,67,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+#page-3, nav a:nth-of-type(3) {
+	background-color: #2980b9;
+}
+
+#page-4, nav a:nth-of-type(4) {
+	background-color: #2ecc71;
+}
+
+#page-5, nav a:nth-of-type(5) {
+	background-color: #db831e;
+}
+
+#page-6, nav a:nth-of-type(6) {
+	background-color: #d0e476;
+}
+
+#page-7, nav a:nth-of-type(7) {
+	background-color: #8e44ad;
+}
+
+#page-8, nav a:nth-of-type(8) {
+	background-color: #cf357d;
+}
+
+#page-9, nav a:nth-of-type(9) {
+	background-color: #cf692d;
+}
+
+#page-10, nav a:nth-of-type(10) {
+	background-color: #526cdf;
+}
+#page-11, nav a:nth-of-type(10) {
+	background-color: #f35555;
+}
+ */
+
+
+
+#navbar_nav {
+	position: fixed;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+#navbar_nav a {
+	border: 4px solid #fff;
+	border-radius: 50%;
+	display: block;
+	margin: 10px;
+	height: 30px;
+	width: 30px;
+}
+
+input[type=radio] {
+    width: 30px;
+	height: 30px;
+	
+}
+
+#question{
+	font-weight: 1000;
+}
+
+.navbar {
+	width: auto;
+	background-color: rgba(20, 20, 20, 0.8);
+	font-size: 20px;
+	font-weight: 300;
+  }
+  
+  .nav-link {
+	color: #ccc;
+  }
+  
+  .navbar-brand,
+  .navbar-brand:hover,
+  .nav-link:hover {
+	color: #fff;
+  }
+  
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+
+/* INSERT CSS HERE */
+
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+	position: fixed;
+	right: 0;
+	bottom: 80px;
+	transform: translateX(100%);
+	transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+	transform: translateX(-10px);
+}
+
+#submit{
+	width: 100px;
+	height: 50px;
+	text-align: center;
+}
+
+.social-panel {	
+	background-color: #fff;
+	border-radius: 16px;
+	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	border: 5px solid #001F61;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Muli';
+	position: relative;
+	height: 169px;	
+	width: 370px;
+	max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+	border: 0;
+	color: #97A5CE;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+	outline: none;
+}
+
+.social-panel p {
+	background-color: #001F61;
+	border-radius: 0 0 10px 10px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 2px 17px 6px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	width: 235px;
+}
+
+.social-panel p i {
+	margin: 0 5px;
+}
+
+.social-panel p a {
+	color: #FF7500;
+	text-decoration: none;
+}
+
+.social-panel h4 {
+	margin: 20px 0;
+	color: #97A5CE;	
+	font-family: 'Muli';	
+	font-size: 14px;	
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.social-panel ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social-panel ul li {
+	margin: 0 10px;
+}
+
+.social-panel ul li a {
+	border: 1px solid #DCE1F2;
+	border-radius: 50%;
+	color: #001F61;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	width: 50px;
+	text-decoration: none;
+}
+
+.social-panel ul li a:hover {
+	border-color: #FF6A00;
+	box-shadow: 0 9px 12px -9px #FF6A00;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #ffffff;
+	color: #001F61;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+	
+	.floating-btn {
+		right: 10px;
+	}
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ouiz</title>
+    <script>
+        console.log(sessionStorage)
+        console.log(document.cookie)
+        const floating_btn = document.querySelector('.floating-btn');
+        const close_btn = document.querySelector('.close-btn');
+        const social_panel_container = document.querySelector('.social-panel-container');
+
+        floating_btn.addEventListener('click', () => {
+            social_panel_container.classList.toggle('visible')
+        });
+
+        close_btn.addEventListener('click', () => {
+            social_panel_container.classList.remove('visible')
+        });
+    </script>
+    <style>
+        nav a:nth-of-type(1) {
+            background: #8e44ad;
+        }
+
+        nav a:nth-of-type(2) {
+            background: #e74c3c;
+        }
+
+        nav a:nth-of-type(3) {
+            background: #2980b9;
+        }
+
+        nav a:nth-of-type(4) {
+            background: #2ecc71;
+        }
+
+        nav a:nth-of-type(5) {
+            background: black;
+        }
+
+        nav a:nth-of-type(6) {
+            background: #2ecc71;
+        }
+
+        nav a:nth-of-type(7) {
+            background: #2ecc71;
+        }
+
+        nav a:nth-of-type(8) {
+            background: #2ecc71;
+        }
+
+        nav a:nth-of-type(9) {
+            background: #2ecc71;
+        }
+
+        nav a:nth-of-type(10) {
+            background: #2ecc71;
+        }
+    </style>
+    <script>
+        var score = 0;
+
+        function checkans(id) {
+
+
+
+            event.preventDefault()
+            console.log("hiiiiii")
+
+            var userans = document.querySelectorAll("input[name=option]:checked")[0].value;
+            var correct_option = document.getElementById("correct_option" + id).value;
+            if (!userans.toLowerCase().localeCompare(correct_option.toLowerCase())) {
+                console.log("correct ans")
+                score = score + 2;
+                document.getElementById("someInput").value = score;
+                swal({
+                    title:"Correct",
+                    text:"Right Answer: Score is:"+score,
+                    icon:"success",
+                    dangerMode:true,
+                }).then((willDelete) => {
+                    if (willDelete) {
+                        window.scrollBy(0, 850.8)
+                    }
+            })
+                
+            }
+            else {
+                swal({
+                    title:"Incorrect",
+                    text:"Wrong Answer:",
+                    icon:"warning",
+                    dangerMode:true,
+                }).then((willDelete) => {
+                    if (willDelete) {
+                        window.scrollBy(0, 850.8)
+                    }
+            })
+            }
+           
+            
+        }
+    </script>
+    <style>
+    
+    .iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/header.ejs') %>
+
+    </header>
+    <!-- <nav id="navbar_nav">
+        <% 
+        if(result !== null && result !== undefined) { %>
+        <% for(var i=0; i < result.length; i++){ %>
+            <a href="#page-<%=i+1%>"></a>
+            <%}}%>
+        <div id="google_translate_element"></div>
+    </nav> -->
+
+
+    <form>
+       <%if(result[0].content_domain.localeCompare("Psychometric")){%>
+        <center><div class="iframe-container"><iframe width="871" height="490" src="https://www.youtube.com/embed/xJ4upCSNgDE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></center>       
+       <%}%>
+        <% if(result !== null && result !== undefined) { %>
+        <% for(var i=0; i < result.length; i++){ %>
+        <section id="page-<%= i+1%>">
+            <div>
+                <% if(result[i].content_path){ %>
+                <center><img src="../../img/<%= result[i].content_path%>" alt="Smiley face" height="200"
+                        width="200"><br></center>
+                <%}%>
+                <label class="question"><%= result[i].question %></label><br>
+                <div id="user_input<%= i%>"><input type="radio" name="option" id="option<%= i%>"
+                        value="<%= result[i].option_1 %>"> <%= result[i].option_1 %><br>
+                    <input type="radio" style="font-weight: normal;" name="option" id="option<%= i%>" value="<%= result[i].option_2 %>">
+                    <%= result[i].option_2 %><br>
+                    <input type="radio" style="font-weight:normal;" name="option" id="option<%= i%>" value="<%= result[i].option_3 %>">
+                    <%= result[i].option_3 %> <br>
+                    <div hidden>
+                        <label type="number" style="font-weight: normal;" name="content_id" id="content_id" hidded>
+                            <%= result[i].content_id %></label><br>
+                        <input name="correct_option<%= i%>" id="correct_option<%= i%>"
+                            value="<%= result[i].correct_option %>" class="correct_option" hidden>
+                        <%= result[i].correct_option %><br></div>
+                </div>
+                <center><button  type="submit" name="submit" id="submit" class="btn btn-primary " onclick="checkans('<%= i%>')"
+                    value="submit">Submit</button></center>
+
+            </div>
+        </section>
+        <%}}%>
+
+        
+
+    </form>
+
+    <form method="POST" name="RegForm" class="code" id="RegForm" action="/finish_test">
+        <center><button style="height:100px;width:300px; font-size: 50px;" type="submit" id="someInput" name="someInput" class="btn btn-danger ">Finish Test</button></center>
+       
+    </form>
+
+
+    <script>
+        $(document).ready(function () {
+            console.log("Hii Jq")
+
+        });
+    </script>
+
+</body>
+
+</html>

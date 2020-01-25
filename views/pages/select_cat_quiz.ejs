@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css" />
+    <script src="node_modules/ejs/ejs.min.js"></script>
+  <script src="ejs.js"></script>
+
+
+  <title>FinAdvise</title>
+  <!-- <script>
+    function myFunction() {
+      var x = document.cookie;
+      var res = x.split("=");
+      console.log(res[1])
+      if(res[1] == "" || res[1] == undefined){
+
+        var adhar_no = prompt("Please enter your Adhar No.");
+      if (adhar_no != null) {
+        if(adhar_no.length == 12){
+          document.getElementById("adhar_no").innerHTML = adhar_no;
+        document.cookie ="adhar_no="+ adhar_no;
+        
+        window.location.href = "/quiz";
+        }
+        
+      }
+      }
+      
+    }
+  </script> -->
+</head>
+
+<body id="body-fortune" data-spy="scroll" data-target="#navbar" data-offset="150" onload="myFunction()">
+  <header>
+    <%- include('../partials/header.ejs') %>
+
+  </header>
+  <form  method="POST" name="RegForm" class="code" id="RegForm" action="/quiz">
+  <div class=" row justify-content-md-center " id="about">
+    <div class="col-sm-3 homepage_card">
+      <input type="text" id="1" hidden name="domain">
+      
+        <div class="card">
+          <img src="img/girl.jpeg" width="221px" height="200px" class="card-img-top a" alt="city" />
+          <div class="card-body">
+            <h5 class="card-title">Health Insurance</h5>
+            <p class="card-text">
+              Quiz on Health Insurance
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-sm-3 homepage_card">
+      <input type="text" id="2" hidden name="domain1">
+     
+        <div class="card">
+          <img src="img/magic.jpeg" width="221px" height="200px"  class="card-img-top b" alt="view" />
+          <div class="card-body">
+            <h5 class="card-title">Life Insurance</h5>
+            <p class="card-text">
+             Quiz on Life Insurance
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</form>
+<script>
+  $('img.a').click(function(){
+    document.getElementById('1').value='Health Insurance';
+     $('#RegForm').submit();
+  });
+
+  $('img.b').click(function(){
+    document.getElementById('2').value='Life Insurance';
+     $('#RegForm').submit();
+  });
+</script>
+  <footer>
+    <p>Designed & created by Majestico. Copyright © by Majestico. 2020</p>
+  </footer>
+</body>
+
+</html>
